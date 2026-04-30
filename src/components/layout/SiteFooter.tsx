@@ -130,7 +130,7 @@ export default function SiteFooter() {
                     {/* 左：Logo + 聯絡 */}
                     <div>
                         <a href="https://www.ida.gov.tw/ctlr?PRO=idx2015&lang=0" className="flex items-center gap-3">
-                            <img src="/logo-footer.svg" alt="經濟部產業發展署" width={300} height={40} className="brightness-0 invert" />
+                            <img src={`${import.meta.env.BASE_URL}logo-footer.svg`} alt="經濟部產業發展署" width={300} height={40} className="brightness-0 invert" />
                         </a>
                         <div className="mt-4 text-sm leading-relaxed text-gray-400">
                             會本部地址：
@@ -162,7 +162,7 @@ export default function SiteFooter() {
                         <div className="mt-3">
                             <a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20251027142301"
                                 target="_blank" rel="noopener noreferrer" className="inline-flex rounded">
-                                <img src="/aplus2_1.jpg" alt="通過AA檢測等級無障礙網頁檢測" width={88} height={31} />
+                                <img src={`${import.meta.env.BASE_URL}aplus2_1.jpg`} alt="通過AA檢測等級無障礙網頁檢測" width={88} height={31} />
                             </a>
                         </div>
                     </div>

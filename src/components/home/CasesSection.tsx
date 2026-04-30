@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useGSAP, gsap, ScrollTrigger } from "../../lib/gsap";
 
+const base = import.meta.env.BASE_URL;
 const mockCases = [
     {
         id: 1,
@@ -8,7 +9,7 @@ const mockCases = [
         categoryColor: "bg-purple-500 text-white",
         title: "AI 智慧安全帽偵測系統導入石化廠",
         desc: "透過電腦視覺即時偵測人員安全裝備佩戴情況，顯著降低工安事故發生率，有效提升工地安全管理效率。",
-        img: "/banner3.jpg",
+        img: `${base}sample1.jpg`,
     },
     {
         id: 2,
@@ -16,7 +17,7 @@ const mockCases = [
         categoryColor: "bg-emerald-600 text-white",
         title: "5G AIoT 設備預測維護解決方案",
         desc: "整合感測器與AI預測模型，提前預警設備異常，減少非計畫性停機，大幅降低維護成本。",
-        img: "/banner1.png",
+        img: `${base}sample2.png`,
     },
     {
         id: 3,
@@ -24,7 +25,7 @@ const mockCases = [
         categoryColor: "bg-pink-500 text-white",
         title: "高雄石化廠區數位孿生平台建置",
         desc: "建立廠區3D數位孿生，實現生產流程模擬與遠端即時監控管理，加速決策反應速度。",
-        img: "/banner2.jpg",
+        img: `${base}sample3.jpg`,
     },
 ];
 

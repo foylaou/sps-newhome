@@ -194,7 +194,7 @@ export default function Navbar() {
             <div className="mx-auto max-w-6xl px-4">
                 <div className="flex h-16 items-center justify-between">
                     <a href="/" className="flex items-center gap-3">
-                        <img src="/logo.svg" alt="石化產業媒合平台" width={300} height={40} />
+                        <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="石化產業媒合平台" width={300} height={40} />
                     </a>
                     <nav className="hidden lg:flex items-center gap-6 text-base font-medium">
                         {navItems.map((it) =>

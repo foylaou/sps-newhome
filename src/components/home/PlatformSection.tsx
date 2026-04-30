@@ -1,9 +1,10 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { useGSAP, gsap, ScrollTrigger } from "../../lib/gsap";
 
+const base = import.meta.env.BASE_URL;
 const banners = [
-    { src: "/banner1.jpg", alt: "石化產業智慧化媒合平台" },
-    { src: "/banner2.jpg", alt: "亞灣2.0智慧科技創新園區" },
+    { src: `${base}banner1.jpg`, alt: "石化產業智慧化媒合平台" },
+    { src: `${base}banner2.jpg`, alt: "亞灣2.0智慧科技創新園區" },
 ];
 
 const features = [

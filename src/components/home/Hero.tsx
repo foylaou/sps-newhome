@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 
+const base = import.meta.env.BASE_URL;
 const banners = [
-    { src: "/banner1.png", alt: "智慧工安技術產業資訊暨媒合平台" },
-    { src: "/banner2.jpg", alt: "石化產業智慧化" },
-    { src: "/banner3.jpg", alt: "亞灣2.0智慧科技創新園區" },
+    { src: `${base}banner1.png`, alt: "智慧工安技術產業資訊暨媒合平台" },
+    { src: `${base}banner2.jpg`, alt: "石化產業智慧化" },
+    { src: `${base}banner3.jpg`, alt: "亞灣2.0智慧科技創新園區" },
 ];
 
 export default function Hero() {

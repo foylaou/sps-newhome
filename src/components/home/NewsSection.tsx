@@ -22,7 +22,7 @@ const mockNews = [
     },
     {
         id: 3,
-        category: "補助",
+        category: "新知",
         badgeClass: "bg-emerald-100 text-emerald-700",
         date: "2026-03-28",
         title: "XR人才培育計畫開始招募，名額有限",
@@ -46,7 +46,7 @@ const mockNews = [
     },
     {
         id: 6,
-        category: "補助",
+        category: "新知",
         badgeClass: "bg-emerald-100 text-emerald-700",
         date: "2026-02-20",
         title: "中小企業數位轉型補助方案，即日起受理申請",
