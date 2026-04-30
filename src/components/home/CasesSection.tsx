@@ -9,7 +9,7 @@ const mockCases = [
         categoryColor: "bg-purple-500 text-white",
         title: "AI 智慧安全帽偵測系統導入石化廠",
         desc: "透過電腦視覺即時偵測人員安全裝備佩戴情況，顯著降低工安事故發生率，有效提升工地安全管理效率。",
-        img: `${base}sample1.jpg`,
+        img: `${base}sample1.png`,
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const mockCases = [
         categoryColor: "bg-pink-500 text-white",
         title: "高雄石化廠區數位孿生平台建置",
         desc: "建立廠區3D數位孿生，實現生產流程模擬與遠端即時監控管理，加速決策反應速度。",
-        img: `${base}sample3.jpg`,
+        img: `${base}sample3.png`,
     },
 ];
 
