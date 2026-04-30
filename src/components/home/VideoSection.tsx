@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useGSAP, gsap, ScrollTrigger } from "../../lib/gsap";
 
+const base = import.meta.env.BASE_URL;
 const mockVideos = [
     {
         id: 1,
@@ -8,6 +9,7 @@ const mockVideos = [
         duration: "12:34",
         date: "2025-03-15",
         gradient: "from-purple-600 via-purple-500 to-pink-400",
+        backgroundImage:`${base}video1.png`,
     },
     {
         id: 2,
@@ -15,6 +17,7 @@ const mockVideos = [
         duration: "08:21",
         date: "2025-02-28",
         gradient: "from-pink-500 via-pink-400 to-purple-400",
+        backgroundImage:`${base}video2.png`,
     },
     {
         id: 3,
@@ -22,6 +25,7 @@ const mockVideos = [
         duration: "15:07",
         date: "2025-01-19",
         gradient: "from-emerald-600 via-teal-500 to-cyan-400",
+        backgroundImage:`${base}video3.png`,
     },
 ];
 
@@ -44,16 +48,9 @@ function VideoCard({ v, index }: { v: typeof mockVideos[number]; index: number }
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
-            <div className={`relative aspect-video bg-gradient-to-br ${v.gradient} overflow-hidden`}>
-                <div className="absolute inset-0 opacity-20"
-                    style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='1' height='1' x='0' y='0' fill='%23fff'/%3E%3Crect width='1' height='1' x='2' y='2' fill='%23fff'/%3E%3C/svg%3E\")" }}
-                />
-                <div className="absolute inset-0"
-                    style={{
-                        backgroundImage: "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
-                        backgroundSize: "40px 40px",
-                    }}
-                />
+            <div className={`relative aspect-video bg-gradient-to-br ${v.gradient} overflow-hidden`}
+                style={v.backgroundImage ? { backgroundImage: `url(${v.backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
+            >
                 <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-200 ${hovered ? "scale-110" : "scale-100"}`}>
                     <div className="w-14 h-14 drop-shadow-lg">
                         <PlayIcon />
