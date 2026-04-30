@@ -1,0 +1,293 @@
+{
+  "$metadata": {
+    "tokenSetOrder": ["global", "semantic", "component"]
+  },
+
+  "global": {
+    "color": {
+      "purple": {
+        "50":  { "$value": "#F0EEFF", "$type": "color" },
+        "100": { "$value": "#D6CFFF", "$type": "color" },
+        "200": { "$value": "#B8ACFF", "$type": "color" },
+        "300": { "$value": "#9B88FF", "$type": "color" },
+        "400": { "$value": "#8B6FFF", "$type": "color" },
+        "500": { "$value": "#6B4EFF", "$type": "color" },
+        "600": { "$value": "#4B2FDF", "$type": "color" },
+        "700": { "$value": "#3620B0", "$type": "color" },
+        "800": { "$value": "#231480", "$type": "color" },
+        "900": { "$value": "#120A52", "$type": "color" }
+      },
+      "pink": {
+        "50":  { "$value": "#FFEEF3", "$type": "color" },
+        "100": { "$value": "#FFCFDC", "$type": "color" },
+        "200": { "$value": "#FF9EBB", "$type": "color" },
+        "300": { "$value": "#FF6B8A", "$type": "color" },
+        "400": { "$value": "#F54E76", "$type": "color" },
+        "500": { "$value": "#E8436B", "$type": "color" },
+        "600": { "$value": "#C42050", "$type": "color" },
+        "700": { "$value": "#9E163D", "$type": "color" },
+        "800": { "$value": "#780D2C", "$type": "color" },
+        "900": { "$value": "#52061D", "$type": "color" }
+      },
+      "navy": {
+        "50":  { "$value": "#EEEEF5", "$type": "color" },
+        "100": { "$value": "#C8C8DF", "$type": "color" },
+        "200": { "$value": "#9A9ABF", "$type": "color" },
+        "300": { "$value": "#6E6E9F", "$type": "color" },
+        "400": { "$value": "#484880", "$type": "color" },
+        "500": { "$value": "#2E2E60", "$type": "color" },
+        "600": { "$value": "#1A1A3E", "$type": "color" },
+        "700": { "$value": "#111130", "$type": "color" },
+        "800": { "$value": "#0A0A22", "$type": "color" },
+        "900": { "$value": "#040416", "$type": "color" }
+      },
+      "gray": {
+        "50":  { "$value": "#F9F9FB", "$type": "color" },
+        "100": { "$value": "#F0EFF5", "$type": "color" },
+        "200": { "$value": "#E2E1EA", "$type": "color" },
+        "300": { "$value": "#C8C7D4", "$type": "color" },
+        "400": { "$value": "#9E9DAD", "$type": "color" },
+        "500": { "$value": "#6B7280", "$type": "color" },
+        "600": { "$value": "#4B5060", "$type": "color" },
+        "700": { "$value": "#343843", "$type": "color" },
+        "800": { "$value": "#1F2229", "$type": "color" },
+        "900": { "$value": "#0D0F13", "$type": "color" }
+      },
+      "white": { "$value": "#FFFFFF", "$type": "color" },
+      "black": { "$value": "#0D0F13", "$type": "color" }
+    },
+
+    "gradient": {
+      "heroCta": {
+        "$value": "linear-gradient(135deg, {global.color.purple.500} 0%, {global.color.pink.500} 100%)",
+        "$type": "color",
+        "$description": "主要 CTA 按鈕、Hero 裝飾球體"
+      },
+      "headingAccent": {
+        "$value": "linear-gradient(135deg, {global.color.purple.400} 0%, {global.color.pink.600} 100%)",
+        "$type": "color",
+        "$description": "標題強調文字 clip-text、Badge 底色"
+      },
+      "decorative": {
+        "$value": "linear-gradient(135deg, {global.color.purple.600} 0%, {global.color.purple.400} 50%, {global.color.pink.300} 100%)",
+        "$type": "color",
+        "$description": "大型背景裝飾幾何、點陣圖形"
+      },
+      "darkSection": {
+        "$value": "linear-gradient(135deg, {global.color.navy.600} 0%, {global.color.navy.800} 100%)",
+        "$type": "color",
+        "$description": "電子報 Banner、深色區塊背景"
+      },
+      "subtleSurface": {
+        "$value": "linear-gradient(180deg, {global.color.gray.50} 0%, {global.color.purple.50} 100%)",
+        "$type": "color",
+        "$description": "頁面整體背景淡漸層"
+      }
+    },
+
+    "fontSize": {
+      "xs":   { "$value": "12px", "$type": "dimension" },
+      "sm":   { "$value": "14px", "$type": "dimension" },
+      "base": { "$value": "16px", "$type": "dimension" },
+      "lg":   { "$value": "18px", "$type": "dimension" },
+      "xl":   { "$value": "20px", "$type": "dimension" },
+      "2xl":  { "$value": "24px", "$type": "dimension" },
+      "3xl":  { "$value": "30px", "$type": "dimension" },
+      "4xl":  { "$value": "36px", "$type": "dimension" },
+      "5xl":  { "$value": "48px", "$type": "dimension" },
+      "6xl":  { "$value": "60px", "$type": "dimension" }
+    },
+
+    "fontWeight": {
+      "regular": { "$value": 400, "$type": "fontWeight" },
+      "medium":  { "$value": 500, "$type": "fontWeight" },
+      "semibold": { "$value": 600, "$type": "fontWeight" },
+      "bold":    { "$value": 700, "$type": "fontWeight" },
+      "heavy":   { "$value": 800, "$type": "fontWeight" }
+    },
+
+    "lineHeight": {
+      "tight":  { "$value": 1.2, "$type": "number" },
+      "snug":   { "$value": 1.375, "$type": "number" },
+      "normal": { "$value": 1.5, "$type": "number" },
+      "relaxed": { "$value": 1.625, "$type": "number" },
+      "loose":  { "$value": 1.75, "$type": "number" }
+    },
+
+    "fontFamily": {
+      "sans": { "$value": "'Noto Sans TC', 'Inter', sans-serif", "$type": "fontFamily" },
+      "mono": { "$value": "'JetBrains Mono', 'Fira Code', monospace", "$type": "fontFamily" }
+    },
+
+    "spacing": {
+      "1":  { "$value": "4px",   "$type": "dimension" },
+      "2":  { "$value": "8px",   "$type": "dimension" },
+      "3":  { "$value": "12px",  "$type": "dimension" },
+      "4":  { "$value": "16px",  "$type": "dimension" },
+      "5":  { "$value": "20px",  "$type": "dimension" },
+      "6":  { "$value": "24px",  "$type": "dimension" },
+      "8":  { "$value": "32px",  "$type": "dimension" },
+      "10": { "$value": "40px",  "$type": "dimension" },
+      "12": { "$value": "48px",  "$type": "dimension" },
+      "16": { "$value": "64px",  "$type": "dimension" },
+      "20": { "$value": "80px",  "$type": "dimension" },
+      "24": { "$value": "96px",  "$type": "dimension" }
+    },
+
+    "borderRadius": {
+      "none": { "$value": "0px",   "$type": "dimension" },
+      "sm":   { "$value": "4px",   "$type": "dimension" },
+      "md":   { "$value": "8px",   "$type": "dimension" },
+      "lg":   { "$value": "12px",  "$type": "dimension" },
+      "xl":   { "$value": "16px",  "$type": "dimension" },
+      "2xl":  { "$value": "24px",  "$type": "dimension" },
+      "full": { "$value": "9999px","$type": "dimension" }
+    },
+
+    "shadow": {
+      "sm": {
+        "$value": "0 1px 3px rgba(107, 78, 255, 0.08), 0 1px 2px rgba(107, 78, 255, 0.04)",
+        "$type": "shadow"
+      },
+      "md": {
+        "$value": "0 4px 12px rgba(107, 78, 255, 0.12), 0 2px 6px rgba(107, 78, 255, 0.06)",
+        "$type": "shadow"
+      },
+      "lg": {
+        "$value": "0 10px 32px rgba(107, 78, 255, 0.16), 0 4px 12px rgba(107, 78, 255, 0.08)",
+        "$type": "shadow"
+      },
+      "purple": {
+        "$value": "0 8px 24px rgba(107, 78, 255, 0.30)",
+        "$type": "shadow",
+        "$description": "紫色光暈，用於主要 CTA 按鈕懸停"
+      },
+      "pink": {
+        "$value": "0 8px 24px rgba(232, 67, 107, 0.28)",
+        "$type": "shadow",
+        "$description": "粉紅光暈，用於強調標籤懸停"
+      }
+    }
+  },
+
+  "semantic": {
+    "color": {
+      "brand": {
+        "primary":   { "$value": "{global.color.purple.500}", "$type": "color" },
+        "secondary": { "$value": "{global.color.pink.500}",   "$type": "color" },
+        "dark":      { "$value": "{global.color.navy.600}",   "$type": "color" }
+      },
+      "text": {
+        "primary":   { "$value": "{global.color.navy.600}",   "$type": "color" },
+        "secondary": { "$value": "{global.color.gray.500}",   "$type": "color" },
+        "tertiary":  { "$value": "{global.color.gray.400}",   "$type": "color" },
+        "inverse":   { "$value": "{global.color.white}",      "$type": "color" },
+        "accent":    { "$value": "{global.color.purple.500}", "$type": "color" },
+        "link":      { "$value": "{global.color.purple.600}", "$type": "color" }
+      },
+      "surface": {
+        "page":      { "$value": "{global.color.gray.50}",    "$type": "color" },
+        "base":      { "$value": "{global.color.white}",      "$type": "color" },
+        "raised":    { "$value": "{global.color.white}",      "$type": "color" },
+        "lavender":  { "$value": "#F5F4FF",                   "$type": "color", "$description": "服務卡片底色" },
+        "rose":      { "$value": "#FFEEF3",                   "$type": "color", "$description": "活動/Tag 底色" },
+        "dark":      { "$value": "{global.color.navy.600}",   "$type": "color", "$description": "電子報 Banner" }
+      },
+      "border": {
+        "default":   { "$value": "{global.color.gray.200}",   "$type": "color" },
+        "subtle":    { "$value": "{global.color.gray.100}",   "$type": "color" },
+        "strong":    { "$value": "{global.color.purple.500}", "$type": "color" },
+        "focus":     { "$value": "{global.color.purple.400}", "$type": "color" }
+      },
+      "status": {
+        "activity": { "$value": "{global.color.pink.500}",   "$type": "color" },
+        "industry": { "$value": "{global.color.purple.500}", "$type": "color" },
+        "platform": { "$value": "#0EA5E9",                   "$type": "color" },
+        "policy":   { "$value": "#10B981",                   "$type": "color" }
+      }
+    }
+  },
+
+  "component": {
+    "button": {
+      "primary": {
+        "background":   { "$value": "{global.gradient.heroCta}",         "$type": "color" },
+        "text":         { "$value": "{global.color.white}",              "$type": "color" },
+        "borderRadius": { "$value": "{global.borderRadius.full}",        "$type": "dimension" },
+        "paddingX":     { "$value": "{global.spacing.6}",                "$type": "dimension" },
+        "paddingY":     { "$value": "{global.spacing.3}",                "$type": "dimension" },
+        "fontSize":     { "$value": "{global.fontSize.base}",            "$type": "dimension" },
+        "fontWeight":   { "$value": "{global.fontWeight.semibold}",      "$type": "fontWeight" },
+        "shadow":       { "$value": "{global.shadow.purple}",            "$type": "shadow" }
+      },
+      "outline": {
+        "background":   { "$value": "transparent",                       "$type": "color" },
+        "border":       { "$value": "{global.color.purple.500}",         "$type": "color" },
+        "text":         { "$value": "{global.color.purple.600}",         "$type": "color" },
+        "borderRadius": { "$value": "{global.borderRadius.full}",        "$type": "dimension" },
+        "borderWidth":  { "$value": "1.5px",                             "$type": "dimension" }
+      }
+    },
+    "card": {
+      "default": {
+        "background":   { "$value": "{global.color.white}",              "$type": "color" },
+        "border":       { "$value": "{global.color.gray.200}",           "$type": "color" },
+        "borderWidth":  { "$value": "1px",                               "$type": "dimension" },
+        "borderRadius": { "$value": "{global.borderRadius.xl}",          "$type": "dimension" },
+        "padding":      { "$value": "{global.spacing.6}",                "$type": "dimension" },
+        "shadow":       { "$value": "{global.shadow.sm}",                "$type": "shadow" }
+      },
+      "service": {
+        "background":   { "$value": "#F5F4FF",                           "$type": "color" },
+        "borderRadius": { "$value": "{global.borderRadius.xl}",          "$type": "dimension" },
+        "iconColor":    { "$value": "{global.color.purple.500}",         "$type": "color" },
+        "titleColor":   { "$value": "{global.color.navy.600}",           "$type": "color" }
+      }
+    },
+    "badge": {
+      "activity": {
+        "background": { "$value": "{global.color.pink.50}",  "$type": "color" },
+        "text":       { "$value": "{global.color.pink.600}", "$type": "color" },
+        "borderRadius":{ "$value": "{global.borderRadius.sm}", "$type": "dimension" }
+      },
+      "industry": {
+        "background": { "$value": "{global.color.purple.50}",  "$type": "color" },
+        "text":       { "$value": "{global.color.purple.600}", "$type": "color" },
+        "borderRadius":{ "$value": "{global.borderRadius.sm}", "$type": "dimension" }
+      },
+      "platform": {
+        "background": { "$value": "#E0F2FE", "$type": "color" },
+        "text":       { "$value": "#0369A1", "$type": "color" },
+        "borderRadius":{ "$value": "{global.borderRadius.sm}", "$type": "dimension" }
+      },
+      "policy": {
+        "background": { "$value": "#DCFCE7", "$type": "color" },
+        "text":       { "$value": "#15803D", "$type": "color" },
+        "borderRadius":{ "$value": "{global.borderRadius.sm}", "$type": "dimension" }
+      }
+    },
+    "navbar": {
+      "background":     { "$value": "rgba(255,255,255,0.92)", "$type": "color" },
+      "borderBottom":   { "$value": "{global.color.gray.100}", "$type": "color" },
+      "height":         { "$value": "64px", "$type": "dimension" },
+      "activeColor":    { "$value": "{global.color.purple.500}", "$type": "color" },
+      "activeIndicator":{ "$value": "{global.gradient.heroCta}", "$type": "color" },
+      "textColor":      { "$value": "{global.color.navy.600}", "$type": "color" }
+    },
+    "hero": {
+      "headingSize":      { "$value": "{global.fontSize.5xl}",       "$type": "dimension" },
+      "headingWeight":    { "$value": "{global.fontWeight.heavy}",   "$type": "fontWeight" },
+      "headingLineHeight":{ "$value": "{global.lineHeight.tight}",   "$type": "number" },
+      "accentGradient":   { "$value": "{global.gradient.headingAccent}", "$type": "color" },
+      "bodySize":         { "$value": "{global.fontSize.lg}",        "$type": "dimension" },
+      "bodyColor":        { "$value": "{global.color.gray.500}",     "$type": "color" }
+    },
+    "statCard": {
+      "numberSize":   { "$value": "{global.fontSize.4xl}",     "$type": "dimension" },
+      "numberWeight": { "$value": "{global.fontWeight.heavy}", "$type": "fontWeight" },
+      "numberColor":  { "$value": "{global.color.navy.600}",   "$type": "color" },
+      "labelSize":    { "$value": "{global.fontSize.sm}",      "$type": "dimension" },
+      "labelColor":   { "$value": "{global.color.gray.500}",   "$type": "color" }
+    }
+  }
+}

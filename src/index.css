@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens → Tailwind v4 Theme ──────────────────── */
+@theme {
+  /* Purple */
+  --color-purple-50:  #F0EEFF;
+  --color-purple-100: #D6CFFF;
+  --color-purple-200: #B8ACFF;
+  --color-purple-300: #9B88FF;
+  --color-purple-400: #8B6FFF;
+  --color-purple-500: #6B4EFF;
+  --color-purple-600: #4B2FDF;
+  --color-purple-700: #3620B0;
+  --color-purple-800: #231480;
+  --color-purple-900: #120A52;
+
+  /* Pink */
+  --color-pink-50:  #FFEEF3;
+  --color-pink-100: #FFCFDC;
+  --color-pink-200: #FF9EBB;
+  --color-pink-300: #FF6B8A;
+  --color-pink-400: #F54E76;
+  --color-pink-500: #E8436B;
+  --color-pink-600: #C42050;
+  --color-pink-700: #9E163D;
+  --color-pink-800: #780D2C;
+  --color-pink-900: #52061D;
+
+  /* Navy */
+  --color-navy-50:  #EEEEF5;
+  --color-navy-100: #C8C8DF;
+  --color-navy-200: #9A9ABF;
+  --color-navy-300: #6E6E9F;
+  --color-navy-400: #484880;
+  --color-navy-500: #2E2E60;
+  --color-navy-600: #1A1A3E;
+  --color-navy-700: #111130;
+  --color-navy-800: #0A0A22;
+  --color-navy-900: #040416;
+
+  /* Gray (custom scale) */
+  --color-gray-50:  #F9F9FB;
+  --color-gray-100: #F0EFF5;
+  --color-gray-200: #E2E1EA;
+  --color-gray-300: #C8C7D4;
+  --color-gray-400: #9E9DAD;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5060;
+  --color-gray-700: #343843;
+  --color-gray-800: #1F2229;
+  --color-gray-900: #0D0F13;
+
+  /* Surface extras */
+  --color-lavender: #F5F4FF;
+  --color-rose-surface: #FFEEF3;
+
+  /* Font family */
+  --font-sans: 'Noto Sans TC', 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ─── Gradient CSS Variables ──────────────────────────────── */
+:root {
+  --gradient-hero-cta:      linear-gradient(135deg, #6B4EFF 0%, #E8436B 100%);
+  --gradient-heading:       linear-gradient(135deg, #8B6FFF 0%, #C42050 100%);
+  --gradient-decorative:    linear-gradient(135deg, #4B2FDF 0%, #8B6FFF 50%, #FF6B8A 100%);
+  --gradient-dark:          linear-gradient(135deg, #1A1A3E 0%, #0A0A22 100%);
+  --gradient-subtle:        linear-gradient(180deg, #F9F9FB 0%, #F0EEFF 100%);
+  --shadow-purple:          0 8px 24px rgba(107, 78, 255, 0.30);
+  --shadow-pink:            0 8px 24px rgba(232, 67, 107, 0.28);
+}
+
+/* ─── Gradient Utilities ──────────────────────────────────── */
+@layer utilities {
+  /* Background gradients */
+  .bg-gradient-cta       { background-image: var(--gradient-hero-cta); }
+  .bg-gradient-heading   { background-image: var(--gradient-heading); }
+  .bg-gradient-deco      { background-image: var(--gradient-decorative); }
+  .bg-gradient-dark      { background-image: var(--gradient-dark); }
+  .bg-gradient-subtle    { background-image: var(--gradient-subtle); }
+
+  /* Gradient text */
+  .text-gradient-cta {
+    background-image: var(--gradient-hero-cta);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-heading {
+    background-image: var(--gradient-heading);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Shadow utilities */
+  .shadow-purple { box-shadow: var(--shadow-purple); }
+  .shadow-pink   { box-shadow: var(--shadow-pink); }
+}
+
+/* ─── Base ────────────────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+/* 無障礙規範外框 */
+:where(
+  a, button, input, select, textarea, summary,
+  [role="button"],
+  [tabindex]:not([tabindex="-1"])
+):focus-visible {
+  outline: 4px dashed #6B4EFF;
+  outline-offset: 2px;
+}
+
+/* ─── Component Classes ───────────────────────────────────── */
+
+/* 案例卡片 CTA */
+.case-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1A3E;
+  background-color: transparent;
+  border: 1px solid #E2E1EA;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.case-cta:hover {
+  background-color: #F0EEFF;
+  border-color: #6B4EFF;
+  color: #4B2FDF;
+  transform: translateX(2px);
+}
+.case-cta-arrow {
+  transition: transform 0.2s ease;
+}
+.case-cta:hover .case-cta-arrow {
+  transform: translateX(2px);
+}
+
+/* 查看全部案例按鈕 */
+.uiverseBtn {
+  border: none;
+  color: #fff;
+  background-image: var(--gradient-hero-cta);
+  border-radius: 999px;
+  background-size: 100% auto;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0.6em 1.8em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-purple);
+  transition: background-position 0.4s ease, box-shadow 0.4s ease;
+}
+.uiverseBtn:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  animation: pulse-purple 1.5s infinite;
+}
+@keyframes pulse-purple {
+  0%   { box-shadow: 0 0 0 0   rgba(107, 78, 255, 0.4); }
+  70%  { box-shadow: 0 0 0 12px rgba(107, 78, 255, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(107, 78, 255, 0); }
+}
