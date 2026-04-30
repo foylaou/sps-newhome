@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base:"sps-newhome",
+  base:"/sps-newhome/",
   plugins: [react(), tailwindcss()],
 })
