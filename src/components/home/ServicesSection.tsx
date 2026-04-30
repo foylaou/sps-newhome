@@ -1,9 +1,10 @@
 import { useRef } from "react";
 import { useGSAP, gsap, ScrollTrigger } from "../../lib/gsap";
+import {CounselingIcon, PigIcon, TalentCultivationIcon, ToolsIcon} from "../../Icon/CustomIcon.tsx";
 
 const services = [
     {
-        emoji: "🤖",
+        emoji: ToolsIcon(),
         title: "技術工具",
         tags: ["產業AI", "技術文件"],
         desc: "提供產業適用的AI工具庫與技術規範文件，協助企業快速評估並導入智慧化解決方案。",
@@ -14,7 +15,7 @@ const services = [
         border:   "#D6CFFF",
     },
     {
-        emoji: "🥽",
+        emoji: TalentCultivationIcon(),
         title: "人才培育",
         tags: ["XR訓練", "線上課程"],
         desc: "結合XR虛擬實境打造沉浸式工安訓練，提升人員應變能力，培育數位轉型人才。",
@@ -25,7 +26,7 @@ const services = [
         border:   "#FFCFDC",
     },
     {
-        emoji: "🏭",
+        emoji: CounselingIcon(),
         title: "產業輔導",
         tags: ["顧問服務", "媒合引導"],
         desc: "專業顧問一對一輔導，協助企業釐清需求、找到技術供應商，加速轉型落地。",
@@ -36,7 +37,7 @@ const services = [
         border:   "#B5D4F4",
     },
     {
-        emoji: "💰",
+        emoji: PigIcon(),
         title: "補助資源",
         tags: ["政府補助", "申請協助"],
         desc: "彙整最新政府補助計畫，提供申請導引服務，協助企業掌握動態、降低轉型成本。",
