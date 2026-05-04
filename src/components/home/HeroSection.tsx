@@ -52,8 +52,17 @@ function CharSpans({ text, className, charStyle }: { text: string; className?: s
 
 export default function HeroSection() {
     const containerRef = useRef<HTMLDivElement>(null);
+    const svgBgRef = useRef<HTMLImageElement>(null);
+    const base = import.meta.env.BASE_URL;
 
     useGSAP(() => {
+        // SVG 背景：淡入 + 慢漂浮
+        gsap.from(svgBgRef.current, { opacity: 0, duration: 2.5, ease: "power2.out" });
+        gsap.to(svgBgRef.current, {
+            y: -28, scale: 1.04,
+            duration: 22, repeat: -1, yoyo: true, ease: "sine.inOut",
+        });
+
         gsap.from(".hero-badge", { opacity: 0, y: -28, duration: 0.7, ease: "back.out(1.7)", delay: 0.2 });
 
         gsap.from(".hero-char", {
@@ -89,10 +98,20 @@ export default function HeroSection() {
         <section
             ref={containerRef}
             className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
-            style={{ background: "linear-gradient(150deg,#04091c 0%,#0d0721 55%,#050d1e 100%)" }}
+            style={{ background: "#1f2147" }}
         >
+            {/* SVG 背景 */}
+            <img
+                ref={svgBgRef}
+                src={`${base}banner-bg-svg-small-size.svg`}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+                style={{ willChange: "transform, opacity" }}
+            />
+            {/* 輕薄遮罩，讓 SVG 圖樣透出來 */}
             <div className="absolute inset-0 pointer-events-none"
-                style={{ backgroundImage: "radial-gradient(circle,rgba(255,255,255,0.055) 1px,transparent 0)", backgroundSize: "46px 46px" }}
+                style={{ background: "linear-gradient(150deg,rgba(4,9,28,0.35) 0%,rgba(13,7,33,0.28) 55%,rgba(5,13,30,0.35) 100%)" }}
             />
 
             <ParticleNetwork />
