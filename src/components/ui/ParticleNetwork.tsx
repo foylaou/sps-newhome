@@ -9,8 +9,8 @@ interface Particle {
     pulse: number;   // 0‒2π phase for pulsing
 }
 
-const COUNT      = 100;
-const MAX_DIST   = 250;
+const COUNT      = 50;
+const MAX_DIST   = 100;
 const MOUSE_R    = 140;
 const MAX_SPEED  = 1.2;
 
