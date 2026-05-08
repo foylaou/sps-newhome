@@ -71,7 +71,7 @@ export default function HeroSection() {
             .to(".hero-line-2 .hero-char", { x: 0, opacity: 1, duration: 0.06, ease: "none" });
 
         gsap.from(".hero-desc", { opacity: 0, y: 22, duration: 0.75, ease: "power2.out", delay: 2.8 });
-        gsap.from(".hero-cta",  { opacity: 0, y: 22, scale: 0.85, duration: 0.8, ease: "back.out(1.5)", delay: 3.0 });
+        gsap.from(".hero-cta, .hero-cta-sec", { opacity: 0, y: 22, scale: 0.85, duration: 0.8, stagger: 0.12, ease: "back.out(1.5)", delay: 3.0 });
 
         gsap.to(".hero-cta", {
             boxShadow: "0 0 40px rgba(107,78,255,0.7), 0 8px 32px rgba(232,67,107,0.5)",
@@ -136,16 +136,29 @@ export default function HeroSection() {
                     讓智慧化職安防護不再是門檻，而是永續競爭力。
                 </p>
 
-                <a
-                    href="#"
-                    className="hero-cta inline-flex items-center gap-3 rounded-full px-9 py-4 text-base font-bold text-white transition-transform duration-200 hover:scale-105 active:scale-95"
-                    style={{ background: "var(--gradient-hero-cta)", boxShadow: "0 8px 28px rgba(107,78,255,0.45)" }}
-                >
-                    立即申請會員
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                    </svg>
-                </a>
+                <div className="flex flex-wrap justify-center gap-4">
+                    <a
+                        href="#"
+                        className="hero-cta inline-flex items-center gap-3 rounded-full px-9 py-4 text-base font-bold text-white transition-transform duration-200 hover:scale-105 active:scale-95"
+                        style={{ background: "var(--gradient-hero-cta)", boxShadow: "0 8px 28px rgba(107,78,255,0.45)" }}
+                    >
+                        申請會員
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+
+                    <a
+                        href="#"
+                        className="hero-cta-sec inline-flex items-center gap-3 rounded-full px-9 py-4 text-base font-bold text-white transition-transform duration-200 hover:scale-105 active:scale-95"
+                        style={{ background: "var(--gradient-hero-cta)", boxShadow: "0 8px 28px rgba(107,78,255,0.45)" }}
+                    >
+                        我要媒合
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
             </div>
 
             <div className="hero-scroll absolute bottom-9 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 text-gray-400 select-none pointer-events-none">
